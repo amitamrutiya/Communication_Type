@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1101088064",
+    "project_id": "communication-4166b",
+    "storage_bucket": "communication-4166b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1101088064:android:6b4970371335a93f5266a5",
+        "android_client_info": {
+          "package_name": "com.example.Comm_type"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1101088064-dlo2k11o83heockn11dhikcrp8dvp20u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvOFWM2MAJQh0UXl9T3JZ_5f9lYMH_T7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1101088064-dlo2k11o83heockn11dhikcrp8dvp20u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1101088064-pb12hk3acmks4nc0v2305e5buajnplqj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.communicationType"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
