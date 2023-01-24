@@ -63,8 +63,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1101088064',
     projectId: 'communication-4166b',
     storageBucket: 'communication-4166b.appspot.com',
-    androidClientId: '1101088064-540crmpkdok4oh2vbsjs8hllb75qum88.apps.googleusercontent.com',
-    iosClientId: '1101088064-pb12hk3acmks4nc0v2305e5buajnplqj.apps.googleusercontent.com',
+    androidClientId:
+        '1101088064-540crmpkdok4oh2vbsjs8hllb75qum88.apps.googleusercontent.com',
+    iosClientId:
+        '1101088064-pb12hk3acmks4nc0v2305e5buajnplqj.apps.googleusercontent.com',
     iosBundleId: 'com.example.communicationType',
   );
 }
