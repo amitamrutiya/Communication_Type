@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ResultSheetsApi.init();
@@ -24,12 +23,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-         SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown,
-      ]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return GetMaterialApp(
-      
         debugShowCheckedModeBanner: false,
         navigatorKey: navigatorKey,
         scaffoldMessengerKey: messengerKey,
@@ -37,7 +35,6 @@ class MyApp extends StatelessWidget {
         defaultTransition: Transition.fadeIn,
         transitionDuration: const Duration(milliseconds: 500),
         theme: ThemeData(
-            
           fontFamily: 'SourceSansPro',
         ),
         home: SplashScreen());

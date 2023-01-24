@@ -1,8 +1,8 @@
 class ResultFields {
-  static   String studentID = "Student ID";
-  static  String studentName = "Student Name";
-  static  String studentType = "Student Type";
-  static  String submitTime = "Submit Time";
+  static String studentID = "Student ID";
+  static String studentName = "Student Name";
+  static String studentType = "Student Type";
+  static String submitTime = "Submit Time";
 
   static List<String> getFields() =>
       [studentID, studentName, studentType, submitTime];
