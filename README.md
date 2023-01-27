@@ -28,10 +28,10 @@ flutter run
 3) Register/Login Your account
 4) Give Quiz and know you communications types
 
-## Source
-[Communication Type.pdf](https://github.com/amitamrutiya2210/Communication_Type/files/10521513/Communication.Type.pdf)
-[Behavioral_Communication_Styles.pdf](https://github.com/amitamrutiya2210/Communication_Type/files/10521512/Behavioral_Communication_Styles.pdf)
-This app is based on true research. You can refer this two PDF for know the logic and purpose of this app.
+## Source & Reference 
+
+This app is based on true research. You can refer this PDF for know the logic and purpose of this app.\
+[Behavioral_Communication_Styles.pdf](https://github.com/amitamrutiya2210/Communication_Type/files/10521539/ilovepdf_merged.pdf)
 
 ## Support
 If you have any issues or questions about the app, please contact us at amitamrutiya2210@gmail.com for assistance.
