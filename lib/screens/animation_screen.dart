@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'dart:math';
+import 'package:Comm_type/data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:Comm_type/constant/dimensions.dart';
 import 'package:Comm_type/models/result.dart';
@@ -57,6 +58,7 @@ class _AnimationScreenState extends State<AnimationScreen>
       ResultFields.studentName: name,
       ResultFields.studentType: widget.userType,
       ResultFields.submitTime: time,
+      ResultFields.answer: UserAnswers.toString().replaceAll('{', '').replaceAll('}', '')
     };
     if (await ResultSheetsApi.update(result) == false) {
       await ResultSheetsApi.insert(result);
@@ -75,7 +77,7 @@ class _AnimationScreenState extends State<AnimationScreen>
         {
           'service_id': 'service_zoc8fow',
           'template_id': "template_8ld4sgf",
-          'user_id': "hqoRY3FK13X6Hu7oW",
+          'user_id': "EMAIL-JS USER ID",
           'template_params': {
             'to_email': '$email',
             'to_name': '$name',
@@ -91,10 +93,12 @@ class _AnimationScreenState extends State<AnimationScreen>
     if (ConnectivityResult.none != await Connectivity().checkConnectivity()) {
       String time = DateFormat('dd-MM-yyyy hh:mm a').format(DateTime.now());
       ResultModel resultModel = ResultModel(
-          submitTime: time,
-          studentID: email,
-          studentName: name,
-          result: widget.userType);
+        submitTime: time,
+        studentID: email,
+        studentName: name,
+        result: widget.userType,
+        answer: UserAnswers.toString().replaceAll('{', '').replaceAll('}', ''),
+      );
       return FirebaseFirestore.instance
           .collection('result')
           .add(resultModel.toJson())

@@ -572,10 +572,12 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
         } else if (maxIndex == 3) {
           userType = 'Director';
         }
+
         print(
             "O : $countofO || G : $countofG || I : $countofI || D : $countofD");
         Get.back();
         Get.to(() => AnimationScreen(userType: userType!));
+        userResult();
       },
     );
     Widget noButton = TextButton(
@@ -610,5 +612,18 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
         return alert;
       },
     );
+  }
+
+  void userResult() {
+    String value = "";
+    for (int i = 0; i < question.length; i++) {
+      if (question[i]['answer_a']) {
+        value = "A";
+      } else {
+        value = "B";
+      }
+      UserAnswers.addAll({i + 1: value});
+    }
+    print(UserAnswers.toString().replaceAll('{', '').replaceAll('}', ''));
   }
 }

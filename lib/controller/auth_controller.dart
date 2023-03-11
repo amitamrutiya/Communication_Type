@@ -60,7 +60,7 @@ class AuthController extends GetxController {
       await GoogleSignIn().signOut();
       Get.back();
       Get.closeAllSnackbars();
-      Get.snackbar("Attention", "Login With Your University ID only",
+      Get.snackbar("Attention", "Login With Your Charusat University ID only",
           icon: Icon(
             Icons.dangerous_rounded,
             size: Dimensions.iconSize16 * 2,

@@ -218,6 +218,8 @@ List<String> SocializerTraits = [
   'Go by intuition'
 ];
 
+Map<int, String> UserAnswers = {};
+
 void clearData() {
   for (var element in question) {
     element['answer_a'] = false;
