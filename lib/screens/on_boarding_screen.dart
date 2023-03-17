@@ -1,5 +1,6 @@
 import 'package:Comm_type/common_weight/big_text.dart';
 import 'package:Comm_type/constant/dimensions.dart';
+import 'package:Comm_type/models/result_sheets.dart';
 import 'package:Comm_type/screens/quiz_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -74,6 +75,7 @@ class OnBoardingScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(
                                       Dimensions.radius15))),
                           onPressed: () {
+                            ResultSheetsApi.init();
                             Get.off(() => QuizScreen(),
                                 transition: Transition.fadeIn);
                           },

@@ -1,4 +1,5 @@
 import 'package:Comm_type/models/result.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:gsheets/gsheets.dart';
 
 class ResultSheetsApi {
@@ -10,8 +11,18 @@ class ResultSheetsApi {
 
   static Future init() async {
     try {
+      final String sheetName = await FirebaseAuth.instance.currentUser!.email!
+              .split('@')[0]
+              .substring(2)
+              .startsWith('d')
+          ? FirebaseAuth.instance.currentUser!.email!
+              .split('@')[0]
+              .substring(2, 5)
+          : FirebaseAuth.instance.currentUser!.email!
+              .split('@')[0]
+              .substring(2, 4);
       final spreadsheet = await _gsheets.spreadsheet(_spreadsheetId);
-      _userSheet = await _getWorkSheet(spreadsheet, title: 'Result');
+      _userSheet = await _getWorkSheet(spreadsheet, title: sheetName.toUpperCase());
       final firstRow = ResultFields.getFields();
       _userSheet!.values.insertRow(1, firstRow);
     } catch (e) {
