@@ -1,0 +1,29 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  build_fastlane:
+    name: Run Fastlane
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Install bundler & Fastlane  
+        run: |
+          gem install bundler:2.2.27
+          bundle config path vendor/bundle
+          bundle init
+          bundle install --jobs 4 --retry 3       
+      - name: Run Fastlane for slack
+        uses: maierj/fastlane-action@v3.0.0
+        with:
+          lane: slack_ios
+          subdirectory: ios
