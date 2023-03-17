@@ -25,5 +25,5 @@ jobs:
       - name: Run Fastlane for slack
         uses: maierj/fastlane-action@v3.0.0
         with:
-          lane: slack_ios
-          subdirectory: ios
+          lane: slack_android
+          subdirectory: android
