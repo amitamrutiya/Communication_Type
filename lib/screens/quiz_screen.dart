@@ -116,8 +116,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            SizedBox(height: Dimensions.height20),
-            Column(
+          Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -41,18 +41,7 @@ class _AnimationScreenState extends State<AnimationScreen>
   late Animation<double> fifthAnimation;
 
   void updateSpreedSheet(String email, String name, String time) async {
-    // try {
-    //   await http
-    //       .post(Uri.parse(
-    //           "https://script.google.com/macros/s/AKfycbyUnJhFwcLse33WsihvOmjpMv9RFSV4Ue-vk1FfYm5wx1oLBcSUhq1yda9u8a-yi8PthA/exec" +
-    //               "?result=${widget.userType}&studentID=$email&studentName=$name&submitTime=$time"))
-    //       .then((response) {
-    //     print(response.body);
-    // callback(convert.j/sonDecode(response.body)['status']);
-    //   });
-    // } catch (e) {
-    //   print(e);
-    // }
+  
     final result = {
       ResultFields.studentID: email,
       ResultFields.studentName: name,
@@ -77,7 +66,7 @@ class _AnimationScreenState extends State<AnimationScreen>
         {
           'service_id': 'service_zoc8fow',
           'template_id': "template_8ld4sgf",
-          'user_id': "EMAIL-JS USER ID",
+          'user_id': "hqoRY3FK13X6Hu7oW",
           'template_params': {
             'to_email': '$email',
             'to_name': '$name',
